@@ -4,10 +4,20 @@
 
 /* Start purging... */
 @tailwind components;
+
 /* Stop purging. */
 
 /* Write you own custom component styles here */
 
+.logo {
+    @apply mr-4 text-xl
+    font-semibold uppercase flex-initial
+}
+
+.main-title {
+    @apply text-4xl
+    font-semibold tracking-wide
+}
 
 /* Start purging... */
 @tailwind utilities;

@@ -26,21 +26,19 @@ export default function Blog({posts: serverPosts}) {
 
     return (
         <MainLayout title={'Blog | Next try project'}>
-            <div className="container">
-                <h1>Blog</h1>
-                <div className="row">
-                    {posts.map((post) => {
-                        return (
-                            <Card
-                                id={post.id}
-                                key={post.id}
-                                title={post.title}
-                                body={post.body}/>
-                        )
-                    })}
-                </div>
-            </div>
+            <h1 className="main-title mb-4">Blog</h1>
 
+            <div className="posts-wrap flex flex-wrap -mx-4">
+            {posts.map((post) => {
+                return (
+                    <Card
+                        id={post.id}
+                        key={post.id}
+                        title={post.title}
+                        body={post.body}/>
+                )
+            })}
+            </div>
         </MainLayout>
     )
 };

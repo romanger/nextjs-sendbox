@@ -26,11 +26,9 @@ export default function Post({post: serverPost}) {
     }
     return (
         <MainLayout title={post.title + 'Next.js try project'}>
-            <div className="container">
-                <h1>{post.title}</h1>
-                <p> {post.body}</p>
-                <button onClick={() => Router.back()} className="btn waves-effect waves-light">Go back</button>
-            </div>
+            <h1 className="main-title">{post.title}</h1>
+            <p> {post.body}</p>
+            <button onClick={() => Router.back()} className="btn waves-effect waves-light">Go back</button>
         </MainLayout>
     )
 }
