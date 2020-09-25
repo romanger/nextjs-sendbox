@@ -53,7 +53,7 @@ Blog.getInitialProps = async ({req}:NextPageContext) => {
   if (!req) {
     return {posts: null}
   }
-  const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+  const response = await fetch(`${process.env.API_URL}/posts`);
   const posts = await response.json();
   return {posts}
 };
